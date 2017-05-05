@@ -1,0 +1,27 @@
+  /** 
+    * È«°ë½Ç×ª»» 
+    * 
+	* @param factorValue 
+	* @return 
+	*/ 					
+	public static  String convertFullToHalf(String factorValue) { 
+
+		char c[] = factorValue.toCharArray(); 
+
+		for (int i = 0; i < c.length; i++) { 
+		
+		    if ('\u3000' == c[i]) { 
+		
+		       c[i] = ' '; 
+		
+		    } else if ('\uFF00' < c[i] && '\uFF5F' > c[i]){ 
+		
+		       c[i] = (char)(c[i] - 65248); 
+		       
+		    } 
+		
+		 } 
+		
+		return new String(c); 
+		
+	} 
